@@ -1,1 +1,106 @@
-HelloWorld!
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>Term of Service</b> Reader</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="./DSC00147.jpg" alt="Architecture" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"> <span class="w3-hide-small w3-text-light-grey">Term of Service Reader</span></h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+  
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="projects">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Projects</h3>
+    <form class="w3-container w3-card-4 w3-light" style="width:45%; float:left">
+        <p>Copy and Paste Term of Service here</p>
+        <p><label></label>
+          <textarea class="w3-input w3-border" name="input" type="submit" id="input"></textarea></p>
+        <button class ="w3-input w3-border" id="myBtn" onclick="getMessage()">Button</button>
+    </form>
+    <!-- change to text later-->
+    <form class="w3-container w3-card-4 w3-light" style="width:47%; float:right">
+        <p>Important detail you need to notice</p>
+        <p><label></label>
+          <textarea class="w3-input w3-border" name="first" type="text" id="outputbox">
+          something inside
+          </textarea></p>
+    </form>
+  </div>
+  </div>
+
+  <script>
+      var input = document.getElementById("input");
+      var value = input.addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (event.keyCode === 13) {
+          document.getElementById("myBtn").click();
+        }
+        return document.getElementById("input").value;
+      });
+      function getMessage() {
+        value = document.getElementById("input").value;
+        alert(value);
+      }
+  </script>
+
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+    <p>When you signing up media platform or downloading an application, you will see a unnoticeable
+       pitfall, a click box with"I have read and agree to Term of Service". However, do you 
+       know what right and privacy you give up, or where can you reach out if business exploit your data. 
+       Well, it's now to take a look of some important but 
+       easily negiliglble detail in Term of Service.
+    </p>
+  </div>
+
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="contact">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
+    <p>Lets get in touch and talk about your next project.</p>
+    <form action="/action_page.php" target="_blank">
+      <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
+      <button class="w3-button w3-black w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+    </form>
+  </div>
+
+<!-- End page content -->
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+</body>
+</html>
